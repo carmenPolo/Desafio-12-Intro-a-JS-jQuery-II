@@ -1,0 +1,64 @@
+<!-- En una página con muchas imágenes mostrar una alerta cuando esté
+cargado el DOM y otra después que las imágenes se hayan cargado.
+
+Tip: Investigar el evento window.onload
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 1</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <style media="screen">
+      img{
+        display:inline-block;
+        float:left;
+        margin:2px;
+      }
+      #gallery{
+        background-color:gray;
+      }
+      p{
+        text-align:center;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div>
+      <p>El DOM está cargando</p>
+    </div>
+
+
+    <div id="gallery">
+      <figure><img src="http://lorempixel.com/400/200/animals/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/city/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/people/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/abstract/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/business/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/cats/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/food/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/nature/1/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/cats/1/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/fashion/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/nature/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/city/1/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/technics/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/transport/" alt=""></figure>
+      <figure><img src="http://lorempixel.com/400/200/transport/1/" alt=""></figure>
+    </div>
+
+    <script>
+      $( document ).ready(function() {
+        $( "p" ).text( "El DOM ya está cargado" );
+      });
+    </script>
+
+  </body>
+</html>
